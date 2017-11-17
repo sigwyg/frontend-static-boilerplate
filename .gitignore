@@ -1,0 +1,6 @@
+.DS_Store
+
+# Dependency directory
+node_modules
+public/bundle.js
+public/licenses.txt

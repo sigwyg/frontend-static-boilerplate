@@ -1,0 +1,50 @@
+{
+  "name": "frontend-static-boilerplate",
+  "version": "1.0.0",
+  "description": "主に非SPAな小規模制作案件向けのフロントエンド開発環境",
+  "main": "index.js",
+  "author": "Yasuo Fukuda <yasuo.fukuda@theport.jp>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server",
+    "deploy": "yarn clean && yarn build:production",
+    "build": "webpack",
+    "build:production": "NODE_ENV=production webpack",
+    "clean": "rm -rf public/*",
+    "lint": "stylelint src/**/*.css"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-hot-loader": "^1.3.3",
+    "css-loader": "^0.28.7",
+    "csswring": "^6.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "license-webpack-plugin": "^1.1.1",
+    "normalize.css": "^7.0.0",
+    "postcss": "^6.0.14",
+    "postcss-apply": "^0.8.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.8",
+    "postcss-nesting": "^4.2.1",
+    "postcss-sorting": "^3.1.0",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "at-rule-empty-line-before": null
+    }
+  }
+}
