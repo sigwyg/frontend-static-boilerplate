@@ -7,6 +7,7 @@
 - postcss + csswring
 - stylelint
 - editorconfig
+- ejs
 
 ## Develop
 
@@ -18,5 +19,6 @@ yarn deploy # production
 
 開発環境は `http://localhost:3355/`  
 基本的に `/src` 配下を編集する。js/cssはHot Module Replacement対応。
+テンプレートとしてEJSを用い、共通パーツを適宜インクルードする。
 
-本番デプロイは `/public` 配下に成果物を吐き出す。CSSはFilename-based Cache Busting対応。ハッシュ付きでファイルを出力した後、そのファイル名でHTMLに`<link>`タグとして書き込む。
+本番デプロイは `/dist` 配下に成果物を吐き出す。CSS/JSはハッシュ付きでファイルに書き込む。

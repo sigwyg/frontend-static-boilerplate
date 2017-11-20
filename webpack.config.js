@@ -9,11 +9,13 @@ const BASE_PLUGINS = [
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   }),
   new HtmlWebpackPlugin({
-    template: 'src/templates/view.html',
+    title: 'View',
+    template: 'src/templates/view.ejs',
     filename: 'view.html'
   }),
   new HtmlWebpackPlugin({
-    template: 'src/templates/index.html',
+    title: 'Index',
+    template: 'src/templates/index.ejs',
     filename: 'index.html'
   }),
   new ExtractTextPlugin('[name]-[hash].css', { allChunks: true }),
@@ -30,12 +32,12 @@ module.exports = {
     './src/main.js'
   ],
   output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js?[hash]',
     publicPath: '/'
   },
   devServer: {
-    contentBase: 'public/',
+    contentBase: 'dist/',
     historyApiFallback: true,
     port: 3355,
     hot: true
@@ -60,6 +62,10 @@ module.exports = {
   ]),
   module: {
     rules: [
+      {
+        test: /\.ejs$/,
+        use: 'ejs-compiled-loader',
+      },
       {
         test: /\.js$/,
         use: 'babel-loader',
