@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% include modules/headerMeta %>
 </head>
 <body class="">
 
-<%- include modules/gHeader -%>
+<% include modules/gHeader %>
 
 <!--: Start #contents -->
 <section id="contents">
@@ -16,7 +14,7 @@
 </section>
 <!--: End #contents -->
 
-<%- include modules/gFooter -%>
+<% include modules/gFooter %>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 module.exports = {
     "plugins": {
         "postcss-import": {},
-        "postcss-custom-properties": {},
+        "postcss-css-variables": {},
         "postcss-apply": {},
         "postcss-nesting": {},
         "postcss-sorting": {},

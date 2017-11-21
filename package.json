@@ -11,7 +11,7 @@
     "deploy": "yarn clean && yarn build:production",
     "build": "webpack",
     "build:production": "NODE_ENV=production webpack",
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf dist/*.css",
     "lint": "stylelint src/**/*.css"
   },
   "devDependencies": {
@@ -31,8 +31,8 @@
     "postcss": "^6.0.14",
     "postcss-apply": "^0.8.0",
     "postcss-cli": "^4.1.1",
+    "postcss-css-variables": "^0.8.0",
     "postcss-cssnext": "^3.0.2",
-    "postcss-custom-properties": "^6.2.0",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
