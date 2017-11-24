@@ -1,7 +1,8 @@
 body {
     background-color: var(--myColor);
-    color: #333;
+    color: #333333;
 }
+
 .g-header {
-    background: red;
+    background: #ff0000;
 }

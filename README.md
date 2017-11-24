@@ -4,10 +4,11 @@
 
 - webpack
 - babel
+- eslint
+- ejs
 - postcss + csswring
 - stylelint
 - editorconfig
-- ejs
 
 ## Develop
 
@@ -15,6 +16,7 @@
 yarn install
 yarn start  # development
 yarn deploy # production
+yarn lint   # eslint & stylelint
 ```
 
 開発環境は `http://localhost:3355/`  

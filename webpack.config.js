@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const BASE_PLUGINS = [
   new webpack.DefinePlugin({
@@ -58,7 +59,16 @@ module.exports = {
   : BASE_PLUGINS.concat([
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new StylelintPlugin({
+      configFile: '.stylelintrc',
+      files: 'src/**/*.css',
+      formatter: require('stylelint-formatter-pretty'),
+      emitErrors: true,
+      failOnError: false,
+      quiet: false
+    })
+
   ]),
   module: {
     rules: [
@@ -68,8 +78,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+          'eslint-loader'
+        ]
       },
       {
         test: /\.css$/,

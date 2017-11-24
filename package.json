@@ -12,10 +12,13 @@
     "build": "webpack",
     "build:production": "NODE_ENV=production webpack",
     "clean": "rm -rf dist/*.css",
-    "lint": "stylelint src/**/*.css"
+    "lint": "yarn stylelint && yarn eslint",
+    "stylelint": "stylelint 'src/**/*.css' --config .stylelintrc",
+    "eslint": "eslint src"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -24,6 +27,10 @@
     "css-loader": "^0.28.7",
     "csswring": "^6.0.1",
     "ejs-compiled-loader": "2.x",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "license-webpack-plugin": "^1.1.1",
@@ -41,13 +48,9 @@
     "style-loader": "^0.19.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
+    "stylelint-formatter-pretty": "^1.0.3",
+    "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "at-rule-empty-line-before": null
-    }
   }
 }
