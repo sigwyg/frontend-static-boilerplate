@@ -2,5 +2,4 @@
 
 # Dependency directory
 node_modules
-public/bundle.js
-public/licenses.txt
+dist
