@@ -1,0 +1,17 @@
+.g-footer {
+    text-align: center;
+    background: #eeeeee;
+    margin: 0;
+    padding: 1em;
+
+    & .copyright {
+        margin: 1em;
+        padding: 0.5em 1em;
+        background: #333333;
+        color: #ffffff;
+
+        & a {
+            color: #ffffff;
+        }
+    }
+}

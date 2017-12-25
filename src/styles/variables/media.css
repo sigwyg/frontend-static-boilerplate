@@ -1,0 +1,16 @@
+/**
+ * Required:
+ * - postcss-media-minmax
+ * - postcss-custom-media
+ *
+ * Usage:
+    @media (--breakpoint-small) {
+        float: none;
+        width: 100%;
+    }
+ */
+@custom-media --breakpoint-sp screen and (width <= 480px);
+@custom-media --breakpoint-tb screen and (480px < width < 1000px);
+@custom-media --breakpoint-pc screen and (width > 1000px);
+@custom-media --breakpoint-small screen and (width < 1000px);
+@custom-media --breakpoint-large screen and (width > 480px);

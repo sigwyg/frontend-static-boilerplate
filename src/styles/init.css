@@ -1,3 +1,7 @@
 @import 'normalize.css';
 @import './variables/colors.css';
+@import './variables/media.css';
+@import './variables/clearfix.css';
+@import './components/global.css';
 @import './components/global-header.css';
+@import './components/global-footer.css';

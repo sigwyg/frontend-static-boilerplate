@@ -1,0 +1,20 @@
+/**
+ * Required:
+ * - postcss-mixins
+ *
+ * Usage:
+    .wrapper {
+        @mixin clearfix;
+    }
+ *
+ */
+@define-mixin clearfix { /* stylelint-disable-line at-rule-no-unknown */
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+    }
+    &::after {
+        clear: both;
+    }
+}

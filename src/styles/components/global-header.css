@@ -1,8 +1,11 @@
-body {
-    background-color: var(--myColor);
-    color: #333333;
-}
-
 .g-header {
-    background: #ff0000;
+    text-align: center;
+    background: #eeeeee;
+    margin: 0;
+    padding: 1em;
+
+    & ul {
+        list-style-type: none;
+        padding: 0;
+    }
 }
