@@ -5,6 +5,7 @@
  */
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
   plugins: [
@@ -12,15 +13,18 @@ module.exports = {
       title: 'View | Frontend Static Boilerplate',
       description: 'Viewのページ',
       heading1: 'View',
-      template: 'ejs-compiled-loader!src/templates/view.ejs',
-      filename: 'view.html'
+      template: 'src/templates/view.ejs',
+      filename: 'view.html',
+      alwaysWriteToDisk: true
     }),
     new HtmlWebpackPlugin({
       title: 'Frontend Static Boilerplate',
       description: 'Frontend Static Boilerplate',
       heading1: 'Top Page',
-      template: 'ejs-compiled-loader!src/templates/index.ejs',
-      filename: 'index.html'
+      template: 'src/templates/index.ejs',
+      filename: 'index.html',
+      alwaysWriteToDisk: true
     }),
+    new HtmlWebpackHarddiskPlugin()
   ]
 }

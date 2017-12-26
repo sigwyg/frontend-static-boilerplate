@@ -28,6 +28,10 @@ module.exports = merge(pages, {
         use: 'babel-loader',
         exclude: /node_modules/
       },
+      {
+        test: /\.ejs$/,
+        use: 'ejs-compiled-loader'
+      },
     ]
   },
   plugins: [
