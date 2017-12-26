@@ -1,0 +1,12 @@
+.contents {
+    & p:last-of-type::after {
+        content: '';
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background: url('~assets/img/sample2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 200px;
+    }
+}

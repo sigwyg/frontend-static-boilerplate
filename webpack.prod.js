@@ -15,7 +15,7 @@ const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlu
 
 module.exports = merge(common, {
   output: {
-    publicPath: '../'
+    publicPath: './'
   },
   entry: [
     './src/main.js'

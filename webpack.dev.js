@@ -64,7 +64,7 @@ module.exports = merge(common, {
           {
             loader: 'url-loader',
             options: {
-              name: "[path][name].[ext]",
+              name: "[path][name].[hash].[ext]",
               limit: 100
             }
           }
