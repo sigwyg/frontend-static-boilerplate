@@ -1,4 +1,8 @@
 .contents {
+    & img {
+        width: 200px;
+        height: 200px;
+    }
     & p:last-of-type::after {
         content: '';
         display: inline-block;

@@ -12,7 +12,12 @@
     <section class="contents">
         <h1>Contents</h1>
         <p>Frontend環境構築キットです。</p>
-        <p><img src="../img/sample.jpg" alt="" width="200"></p>
+        <p><img src="<%= require('../img/sample.jpg') %>" alt="" width="200"></p>
+        <p><img src="<%= require('../img/sample.jpg') %>" alt=""
+                srcset="<%= require('../img/sample.jpg') %> 480w,
+                        <%= require('../img/sample2.jpg') %>">
+        </p>
+
     </section>
 </main>
 <!--: End #contents -->
