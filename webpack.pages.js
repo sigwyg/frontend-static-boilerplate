@@ -21,8 +21,8 @@ module.exports = {
       title: 'View | Frontend Static Boilerplate',
       description: 'Viewのページ',
       heading1: 'View',
-      template: 'src/templates/view.ejs',
-      filename: 'view.html',
+      template: 'src/templates/view/index.ejs',
+      filename: 'view/index.html',
       alwaysWriteToDisk: true
     }),
     new HtmlWebpackHarddiskPlugin()

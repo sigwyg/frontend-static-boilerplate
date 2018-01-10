@@ -15,7 +15,7 @@ const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlu
 
 module.exports = merge(common, {
   output: {
-    publicPath: './'
+    publicPath: '../'
   },
   entry: [
     './src/main.js'
@@ -61,7 +61,7 @@ module.exports = merge(common, {
             options: {
               name: "[name].[hash].[ext]",
               outputPath: "img/",
-              publicPath: './',
+              publicPath: '../',
             }
           },
           {
@@ -93,7 +93,7 @@ module.exports = merge(common, {
             options: {
               name: "[name].[hash].[ext]",
               outputPath: "fonts/",
-              publicPath: './',
+              publicPath: '../',
             }
           },
         ]

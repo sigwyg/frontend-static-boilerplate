@@ -7,7 +7,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const merge = require('webpack-merge');
 const pages = require('./webpack.pages.js');
 
@@ -39,9 +38,5 @@ module.exports = merge(pages, {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new CleanWebpackPlugin(['dist']),
-    new CopyPlugin([
-      { from: 'src/img', to: 'img' },
-      { from: 'src/fonts', to: 'fonts' }
-    ]),
   ],
 });
